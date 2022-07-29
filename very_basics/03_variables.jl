@@ -17,3 +17,20 @@ my_string = "Start Julia"
 typeof(my_string)
 
 # Single quote in Julia is reserved only for char types
+
+##### Boolean operators
+
+# && (AND)
+true && false
+
+# || (OR)
+true || false
+
+# ! (NOT)
+!true
+
+##### Numerical comparisons
+# Equality: == and !=
+
+5 == 5
+5 != 5
