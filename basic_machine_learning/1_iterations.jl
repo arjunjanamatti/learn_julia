@@ -37,3 +37,25 @@ end
 
 [check(x) for x in 0:50:200]
 
+
+using Pkg
+Pkg.add("Distributions")
+Pkg.add("CairoMakie")
+using Distributions
+using CairoMakie
+
+
+N = 10000
+random_normal_samples = rand(Normal(),N)
+random_normal_samples = random_normal_samples.^2
+
+g = fit(Gamma, random_normal_samples)
+
+CaioMakie.activate(type="svg")
+
+f(x) = pdf(g,x)
+xs = 0:0.1:4
+ys = f.(xs)
+lines(xs, ys)
+histl(random_normal_samples, normalization=:pdf, bins=40, alpha=0.4)
+current_figure()
