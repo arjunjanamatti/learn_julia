@@ -23,3 +23,17 @@ map(x -> squares(x), 1:10)
 
 # generating random numbers in comprehension
 random_comprehension = [rand() for x in 1:10]
+
+rand(2,3)
+
+
+function check(x)
+    if x > 100
+        return sqrt(x)
+    else
+        return x
+    end
+end
+
+[check(x) for x in 0:50:200]
+
