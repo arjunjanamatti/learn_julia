@@ -11,3 +11,15 @@ for x in 1:10
 end
 
 squares_vector
+
+# below is example like list comprehension
+squares_vector_comprehension = [squares(x) for x in 1:10]
+
+# similarly we get the results using map
+map(x -> squares(x), 1:10)
+
+# other method
+(1:10).^2
+
+# generating random numbers in comprehension
+random_comprehension = [rand() for x in 1:10]
