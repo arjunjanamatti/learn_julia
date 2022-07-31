@@ -18,3 +18,17 @@ filter(df_1) do row
 end
 
 titanic_df = DataFrame(CSV.File("train.csv"))
+
+describe(titanic_df)
+
+# access single element
+titanic_df[2,:Survived]
+
+# access the row numbers
+titanic_df[2,:]
+
+# access range of rows
+titanic_df[2:5, :]
+
+# access multiple columns
+titanic_df[2, [:Survived, :Pclass]]
